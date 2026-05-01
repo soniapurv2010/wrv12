@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Western Railways v12 — MSTS Route</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Bebas+Neue&family=Noto+Sans:ital,wght@0,300;0,400;0,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&family=Bebas+Neue&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --bg:#060a0f;--surface:#0c1420;--card:#101c2e;
   --border:#1e3a5f;--accent:#f97316;--accent2:#0ea5e9;
-  --text:#e2eaf4;--muted:#7a99bb;--green:#22c55e;
+  --text:#e2eaf4;--muted:#7a99bb;
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Noto Sans',sans-serif}
 
@@ -30,20 +29,19 @@ nav{position:fixed;top:0;width:100%;height:60px;display:flex;justify-content:spa
 .hero-title{font-family:'Bebas Neue';font-size:clamp(4rem,12vw,9rem)}
 .hero-title span{color:var(--accent)}
 .hero-tagline{margin-top:1rem;max-width:500px;color:var(--muted)}
+.btn-primary{margin-top:2rem;background:var(--accent);color:#fff;padding:.8rem 2rem;text-decoration:none}
 
-.btn-primary{background:var(--accent);color:#fff;padding:.8rem 2rem;text-decoration:none}
-
-/* SECTION */
+/* SECTIONS */
 section{padding:100px 5vw}
 .section-title{font-family:'Bebas Neue';font-size:clamp(2.5rem,5vw,4rem)}
 .section-title span{color:var(--accent2)}
-
 .divider{height:1px;background:var(--border)}
 
 /* VIDEO */
 .video-wrapper{
   max-width:900px;margin:auto;
-  aspect-ratio:16/9;border:1px solid var(--border);
+  aspect-ratio:16/9;
+  border:1px solid var(--border);
   overflow:hidden;background:var(--card)
 }
 .video-wrapper iframe{
@@ -51,7 +49,13 @@ section{padding:100px 5vw}
 }
 
 /* FOOTER */
-footer{padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap}
+footer{
+  padding:40px 5vw;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap
+}
 </style>
 </head>
 
@@ -70,7 +74,7 @@ footer{padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-
 <section class="hero">
   <div class="hero-title">Western <span>Railways</span></div>
   <p class="hero-tagline">
-    Experience 2500+ KM of detailed Indian railway simulation.
+    One of the most loved MSTS routes — experience 2500+ KM of detailed Indian railway simulation.
   </p>
   <a href="#video" class="btn-primary">Watch Preview</a>
 </section>
@@ -83,7 +87,8 @@ footer{padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-
 
   <div class="video-wrapper">
     <iframe
-      src="https://www.youtube.com/embed/yOnU3WJ3yb4?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1"
+      src="https://www.youtube-nocookie.com/embed/yOnU3WJ3yb4?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1"
+      title="Western Railways v12 Route Preview"
       allow="autoplay; encrypted-media; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -96,14 +101,16 @@ footer{padding:40px 5vw;border-top:1px solid var(--border);display:flex;justify-
 <section id="pricing">
   <div class="section-title">Pricing</div>
   <p style="margin-top:1rem;color:var(--muted)">
-    Upgrade: ₹600–₹800 | New: ₹1600
+    Upgrade (v11): ₹600<br>
+    Upgrade (v10): ₹800<br>
+    New Purchase: ₹1600
   </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div>Western Railways v12</div>
-  <div>© 2026</div>
+  <div>© 2026 Apurv Soni</div>
 </footer>
 
 </body>
