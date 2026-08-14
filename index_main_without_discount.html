@@ -730,292 +730,6 @@
     .updates-grid { grid-template-columns: 1fr; }
     nav .nav-links { display: none; }
   }
-
-/* ================= INDEPENDENCE DAY PROMOTION THEME ================= */
-:root {
-  --bg: #07110c;
-  --surface: #0c1911;
-  --card: #102018;
-  --border: rgba(255,255,255,0.12);
-  --accent: #ff9933;       /* saffron */
-  --accent2: #138808;      /* India green */
-  --gold: #ff9933;
-  --text: #f7faf7;
-  --muted: #b7c7bb;
-  --danger: #ef4444;
-  --green: #138808;
-  --rail: rgba(255,255,255,0.08);
-  --navy: #000080;         /* Ashoka Chakra */
-  --white: #ffffff;
-}
-
-body {
-  background:
-    radial-gradient(circle at 15% 10%, rgba(255,153,51,0.09), transparent 28%),
-    radial-gradient(circle at 85% 85%, rgba(19,136,8,0.10), transparent 30%),
-    var(--bg);
-}
-
-/* Very subtle flag silhouette behind the page. CSS keeps it self-contained. */
-body::after {
-  content: '';
-  position: fixed;
-  width: min(1150px, 92vw);
-  height: min(720px, 82vh);
-  top: 8vh;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.12;
-  filter: blur(2.5px) saturate(0.8);
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 50% 50%, transparent 0 42%, rgba(0,0,0,0.08) 65%, transparent 78%),
-    linear-gradient(
-      176deg,
-      #ff9933 0%,
-      #ff9933 32%,
-      #ffffff 32%,
-      #ffffff 67%,
-      #138808 67%,
-      #138808 100%
-    );
-  box-shadow:
-    26px 18px 70px rgba(0,0,0,0.3),
-    -22px -20px 70px rgba(255,153,51,0.08),
-    22px 22px 70px rgba(19,136,8,0.08);
-  animation: flagWave 7s ease-in-out infinite alternate;
-}
-
-body::after {
-  clip-path: polygon(
-    0 3%, 7% 0, 14% 4%, 22% 1%, 30% 5%, 38% 2%, 46% 6%, 54% 2%,
-    62% 5%, 70% 1%, 78% 5%, 86% 2%, 94% 6%, 100% 2%,
-    100% 94%, 93% 98%, 86% 94%, 78% 97%, 70% 93%, 62% 98%, 54% 94%,
-    46% 97%, 38% 93%, 30% 98%, 22% 94%, 14% 97%, 7% 93%, 0 97%
-  );
-}
-
-@keyframes flagWave {
-  0%   { transform: translateX(-50%) perspective(900px) rotateY(-2deg) skewY(0deg) scaleX(1.01); }
-  50%  { transform: translateX(-50%) perspective(900px) rotateY(2deg) skewY(-0.7deg) scaleX(1.035); }
-  100% { transform: translateX(-50%) perspective(900px) rotateY(-1deg) skewY(0.7deg) scaleX(1.01); }
-}
-
-/* Tricolour glows are kept in separate layers so text remains readable. */
-.hero-bg {
-  background:
-    linear-gradient(180deg, rgba(3,10,6,0.78), rgba(3,10,6,0.92)),
-    linear-gradient(160deg, #172319 0%, #07110c 60%);
-}
-.hero-bg::after {
-  background:
-    radial-gradient(ellipse 70% 45% at 50% 5%, rgba(255,153,51,0.16) 0%, transparent 70%),
-    radial-gradient(ellipse 70% 45% at 50% 95%, rgba(19,136,8,0.15) 0%, transparent 70%);
-}
-.hero-eyebrow { color: var(--accent); }
-.hero-title .highlight { color: var(--accent); }
-.hero-subtitle { color: #dce8de; }
-.hero-offer {
-  display: inline-flex;
-  width: fit-content;
-  margin-top: 0.9rem;
-  padding: 7px 12px;
-  background: rgba(0,0,128,0.16);
-  border: 1px solid rgba(255,255,255,0.14);
-  color: #f1f5ff;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1.4px;
-}
-.hero-tagline { color: #edf4ee; }
-
-nav {
-  background: rgba(4,10,7,0.93);
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-}
-.nav-brand { color: var(--accent); }
-.nav-brand span { color: var(--accent2); }
-.nav-links a:hover { color: var(--accent); }
-
-.btn-primary {
-  background: var(--accent);
-  color: #111;
-  box-shadow: 0 8px 25px rgba(255,153,51,0.18);
-}
-.btn-primary:hover { background: #ffad59; }
-.btn-outline {
-  border-color: rgba(255,255,255,0.22);
-  color: #e9f0ea;
-}
-.btn-outline:hover {
-  border-color: var(--accent2);
-  color: #8fe184;
-}
-
-.stat-num { color: var(--accent); }
-.stat-label { color: #b8c8ba; }
-
-section { background: transparent; }
-.section-label { color: var(--accent); }
-.section-label::before { background: var(--accent); }
-.section-title span { color: var(--accent2); }
-.divider {
-  background: linear-gradient(90deg, transparent, rgba(255,153,51,0.32) 25%, rgba(255,255,255,0.18) 50%, rgba(19,136,8,0.32) 75%, transparent);
-}
-
-#gallery, #pricing, #license, footer {
-  background: rgba(7,17,12,0.78);
-}
-#video, #about, #payment, #activities {
-  background: rgba(4,12,8,0.72);
-}
-
-.gallery-item, .gallery-skeleton, .video-wrapper, .price-card,
-.qr-container, .ls-body, .activities-locked, .update-item, .sections-list li {
-  background: rgba(16,32,24,0.90);
-  border-color: rgba(255,255,255,0.10);
-}
-
-.gallery-item:hover { border-color: rgba(255,153,51,0.48); }
-.sections-list li { border-left-color: var(--accent2); }
-.sections-list li:hover { border-color: var(--accent); background: rgba(255,153,51,0.06); }
-
-.special-badge {
-  background: rgba(255,153,51,0.08);
-  border-color: rgba(255,153,51,0.28);
-  color: #ffb76d;
-}
-.special-badge::before { color: var(--accent); }
-
-.update-item::before { color: var(--accent2); }
-.badge-v11 {
-  background: rgba(19,136,8,0.13);
-  color: #7ddc74;
-  border-color: rgba(19,136,8,0.35);
-}
-.badge-v10 {
-  background: rgba(0,0,128,0.14);
-  color: #9aaaff;
-  border-color: rgba(0,0,128,0.42);
-}
-.badge-new {
-  background: rgba(255,153,51,0.13);
-  color: #ffbd7a;
-  border-color: rgba(255,153,51,0.35);
-}
-
-.price-card.featured {
-  border-color: rgba(255,153,51,0.58);
-  background: linear-gradient(160deg, rgba(255,153,51,0.08), rgba(16,32,24,0.96));
-}
-.price-card.featured::before {
-  background: linear-gradient(90deg, var(--accent), #fff, var(--accent2));
-}
-.price-card:hover { border-color: rgba(255,153,51,0.55); }
-
-.price-promo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 0 0 1rem;
-}
-.price-original {
-  color: #83948a;
-  text-decoration: line-through;
-  text-decoration-thickness: 2px;
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-.price-discount {
-  display: inline-flex;
-  align-items: center;
-  min-height: 28px;
-  padding: 4px 9px;
-  background: linear-gradient(90deg, rgba(255,153,51,0.16), rgba(19,136,8,0.14));
-  border: 1px solid rgba(255,255,255,0.14);
-  color: #fff;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-.price-amount {
-  color: #fff;
-  text-shadow: 0 0 22px rgba(255,153,51,0.10);
-}
-.price-note { color: #b8c8ba; }
-
-.independence-banner {
-  max-width: 960px;
-  margin: 0 auto 28px;
-  padding: 18px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  background: rgba(255,255,255,0.035);
-  border: 1px solid rgba(255,255,255,0.13);
-  border-left: 4px solid var(--accent);
-  border-right: 4px solid var(--accent2);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-.independence-banner strong {
-  display: block;
-  color: #fff;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.1rem;
-  letter-spacing: 1.1px;
-  margin-bottom: 3px;
-}
-.independence-banner span {
-  color: #c2d0c5;
-  font-size: 0.85rem;
-}
-.independence-badge {
-  flex-shrink: 0;
-  padding: 7px 12px;
-  background: rgba(0,0,128,0.18);
-  border: 1px solid rgba(120,140,255,0.35);
-  color: #c5ceff;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.qr-name { color: var(--accent); }
-.step-num { background: var(--accent); color: #111; }
-.ls-icon { border-color: var(--accent); color: var(--accent); }
-.license-timeline::before {
-  background: linear-gradient(180deg, var(--accent), #fff 48%, var(--accent2));
-}
-.whatsapp-cta {
-  background: rgba(19,136,8,0.08);
-  border-color: rgba(19,136,8,0.28);
-}
-.whatsapp-cta:hover { background: rgba(19,136,8,0.14); }
-.footer-brand { color: var(--accent); }
-.footer-brand span { color: var(--accent2); }
-
-@media (max-width: 640px) {
-  body::after {
-    width: 120vw;
-    height: 65vh;
-    top: 12vh;
-    opacity: 0.075;
-  }
-  .independence-banner { padding: 16px; }
-}
-
 </style>
 </head>
 <body>
@@ -1165,26 +879,15 @@ section { background: transparent; }
 
 <!-- PRICING -->
 <section id="pricing">
-  <div class="section-label">Independence Day Offer</div>
+  <div class="section-label">Pricing</div>
   <div class="section-title">Choose Your <span>Plan</span></div>
-  <div class="independence-banner">
-    <div>
-      <strong>🇮🇳 Independence Day Special — 20% OFF on all plans</strong>
-      <span>Celebrate Independence Day with a special community-only price on Western Railways v12.</span>
-    </div>
-    <div class="independence-badge">Valid till 15th Aug only</div>
-  </div>
   <div class="pricing-grid">
 
     <div class="price-card featured">
       <div class="price-badge badge-v11">Existing v11 Users</div>
       <div class="price-tier">Upgrade from v11</div>
-      <div class="price-promo">
-        <span class="price-original">Regular ₹600</span>
-        <span class="price-discount">20% OFF</span>
-      </div>
-      <div class="price-amount"><span class="currency">₹</span>480</div>
-      <p class="price-note">Independence Day price · Valid till 15th Aug only</p>
+      <div class="price-amount"><span class="currency">₹</span>600</div>
+      <p class="price-note">For existing v11 owners only</p>
       <ul class="price-features">
         <li>Full v12 route files</li>
         <li>License key via mail</li>
@@ -1197,12 +900,8 @@ section { background: transparent; }
     <div class="price-card">
       <div class="price-badge badge-v10">Existing v10 Users</div>
       <div class="price-tier">Upgrade from v10</div>
-      <div class="price-promo">
-        <span class="price-original">Regular ₹800</span>
-        <span class="price-discount">20% OFF</span>
-      </div>
-      <div class="price-amount"><span class="currency">₹</span>640</div>
-      <p class="price-note">Independence Day price · Valid till 15th Aug only</p>
+      <div class="price-amount"><span class="currency">₹</span>800</div>
+      <p class="price-note">For existing v10 owners</p>
       <ul class="price-features">
         <li>Full v12 route files</li>
         <li>License key via mail</li>
@@ -1215,12 +914,8 @@ section { background: transparent; }
     <div class="price-card">
       <div class="price-badge badge-new">New Users</div>
       <div class="price-tier">New Purchase</div>
-      <div class="price-promo">
-        <span class="price-original">Regular ₹1800</span>
-        <span class="price-discount">20% OFF</span>
-      </div>
-      <div class="price-amount"><span class="currency">₹</span>1440</div>
-      <p class="price-note">Independence Day price · Valid till 15th Aug only</p>
+      <div class="price-amount"><span class="currency">₹</span>1800</div>
+      <p class="price-note">First-time buyer — full route</p>
       <ul class="price-features">
         <li>Full v12 route files</li>
         <li>License key via mail</li>
